@@ -10,3 +10,9 @@ class Note(models.Model):
     id = models.UUIDField(primary_key=True,default=uuid4, editable=False)
 
 
+class TimeTracker(models.Model):
+    title = models.CharField(max_length=100)
+    start = models.DateField()
+    content = models.TextField(blank=True)
+    stop = models.DateField()
+    id = models.UUIDField(primary_key=True,default=uuid4, editable=False)
